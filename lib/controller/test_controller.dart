@@ -15,7 +15,6 @@ class TestController extends GetxController {
     update();
     var response = await testData.getData();
 
-    print("=============================== Controller $response ");
 
     statusRequest = handlingData(response);
 

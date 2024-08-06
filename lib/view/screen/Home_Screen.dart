@@ -13,13 +13,13 @@ class HomeScreen extends StatelessWidget {
     return GetBuilder<HomeScreenControllerImp>(
         builder: (controller) => Scaffold(
               appBar: AppBar(
-                title: Text("Orders"),
+                title: const Text("Orders"),
               ),
               bottomNavigationBar: const CustomBottomAppBarHome(),
               // ignore: deprecated_member_use
               body: WillPopScope(
-                  child: controller.listPage.elementAt(controller.currentpage),
-                  onWillPop: alertExitApp),
+                  onWillPop: alertExitApp,
+                  child: controller.listPage.elementAt(controller.currentpage)),
             ));
   }
 }

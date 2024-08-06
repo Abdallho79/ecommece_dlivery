@@ -20,7 +20,7 @@ class OnBoardingButton extends GetView<OnBoardingCOntroller> {
             controller.next();
           },
           color: AppColor.primaryColor,
-          child: Text("Continue")),
+          child: const Text("Continue")),
     );
   }
 }

@@ -40,7 +40,7 @@ class SignUpController extends GetxController {
       if (statusRequest == StatusRequest.success) {
         if (response['status'] == "success") {
           Get.snackbar("Success", "Enter VerifyCode",
-              duration: Duration(seconds: 8));
+              duration: const Duration(seconds: 8));
           Get.toNamed(AppRouts.verifyCodeSignUp, arguments: {
             "email": email!.text,
           });
@@ -60,7 +60,6 @@ class SignUpController extends GetxController {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     email!.dispose();
     password!.dispose();
     name!.dispose();

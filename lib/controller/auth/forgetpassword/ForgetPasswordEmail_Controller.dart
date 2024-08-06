@@ -16,14 +16,12 @@ class ForgetPasswordEmailController extends GetxController {
   @override
   void onInit() {
     email = TextEditingController();
-    // TODO: implement onInit
     super.onInit();
   }
 
   @override
   void dispose() {
     email!.dispose();
-    // TODO: implement dispose
     super.dispose();
   }
 
@@ -32,8 +30,7 @@ class ForgetPasswordEmailController extends GetxController {
       statusRequest = StatusRequest.loading;
       update();
 
-      var response = await checkEmailData.CheckData(email!.text);
-      print("=============================== Controller $response ");
+      var response = await checkEmailData.checkData(email!.text);
       statusRequest = handlingData(response);
       if (StatusRequest.success == statusRequest) {
         if (response['status'] == "success") {
@@ -45,7 +42,6 @@ class ForgetPasswordEmailController extends GetxController {
         }
         // End
       } else {
-        print("==================${email!.text}================");
       }
       update();
     }

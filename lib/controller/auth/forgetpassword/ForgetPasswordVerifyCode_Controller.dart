@@ -21,21 +21,14 @@ class ForgetPasswordVerifyCodeController extends GetxController {
     var response = await verfiyCodeForgetPassdata.checkData(email, code1);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
-      print("==============${response["status"]}================");
       // Start backend
       if (response['status'] == "success") {
         Get.snackbar("Success", "Correct Verification Code");
         Get.offNamed(AppRouts.changePassword, arguments: {"email": email});
       } else {
-        print("==============${response["status"]}================");
         Get.snackbar("Failure", "inCorrect Verification Code");
       }
     }
     update();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
   }
 }

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TestScreen extends StatelessWidget {
 //  final String? buttontext;
 //   final  void Function()? onPressed
-  TestScreen({
+  const TestScreen({
     Key? key,
   }) : super(key: key);
 
@@ -12,10 +12,11 @@ class TestScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: ListView(
-          children: [
-              Center(child: Text("TestController"),)
-            ],
-
+          children: const [
+            Center(
+              child: Text("TestController"),
+            )
+          ],
         ),
       ),
     );

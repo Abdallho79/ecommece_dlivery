@@ -9,7 +9,7 @@ class AccepteOrders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    AcceptedController controller = Get.put(AcceptedController());
+    Get.put(AcceptedController());
 
     return Scaffold(
       // appBar: AppBar(

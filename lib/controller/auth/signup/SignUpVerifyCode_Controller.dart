@@ -43,9 +43,4 @@ class SignUpVerifyCodeController extends GetxController {
     }
     update();
   }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
 }

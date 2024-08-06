@@ -19,14 +19,14 @@ class OrdersDetailsController extends GetxController {
 
   CameraPosition? cameraPosition;
   Position? position;
-  Completer<GoogleMapController>? completer_controller;
+  Completer<GoogleMapController>? completercontroller;
   List<Marker> marker = [];
   double? long;
   double? lat;
 
   @override
   void onInit() {
-    completer_controller = Completer<GoogleMapController>();
+    completercontroller = Completer<GoogleMapController>();
     ordersModel = Get.arguments["ordersdetails"];
     getLocatoin();
     getData();
@@ -36,16 +36,12 @@ class OrdersDetailsController extends GetxController {
   getLocatoin() async {
     ordersModel.addressLat = 31.023613;
     ordersModel.addressLong = 31.417852;
-    print('==================================');
-    print(ordersModel.addressLat);
-    print(ordersModel.addressLong);
-    print('==================================');
     if (ordersModel.ordersType == "0") {
       cameraPosition = CameraPosition(
           target: LatLng(ordersModel.addressLat!, ordersModel.addressLong!),
           zoom: 12);
       marker.add(Marker(
-          markerId: MarkerId("1"),
+          markerId: const MarkerId("1"),
           position: LatLng(ordersModel.addressLat!, ordersModel.addressLong!)));
       update();
     }
@@ -54,7 +50,6 @@ class OrdersDetailsController extends GetxController {
   getData() async {
     statusRequest = StatusRequest.loading;
     var response = await testData.getData(ordersModel.ordersId!);
-    print("=============================== Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {

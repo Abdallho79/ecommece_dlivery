@@ -24,7 +24,7 @@ class SocialIcon extends StatelessWidget {
             height: 60,
             fit: BoxFit.fill,
           ),
-          SizedBox(
+          const SizedBox(
             height: 8,
           ),
           Text(name)

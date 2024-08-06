@@ -7,7 +7,6 @@ import 'package:get/get.dart';
 fcmConFing() {
   FirebaseMessaging.onMessage.listen((event) {
     // يتم استاعدئهم في LocaleController
-    print("==================fcmConFing===============");
     FlutterRingtonePlayer.playNotification();
     // refrechPage(event.data);
     Get.snackbar(event.notification!.title!, event.notification!.body!);

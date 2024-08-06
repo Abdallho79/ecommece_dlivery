@@ -9,7 +9,7 @@ class CustomTitleHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.centerLeft,
-      margin: EdgeInsets.symmetric(vertical: 10),
+      margin: const EdgeInsets.symmetric(vertical: 10),
       child: Text(title,
           style: const TextStyle(
               fontSize: 20,

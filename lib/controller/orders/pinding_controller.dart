@@ -17,14 +17,12 @@ class BindingController extends GetxController {
     statusRequest = StatusRequest.loading;
     update();
     var response = await bindingdata.orderBindig();
-    print("=============================== Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
         List responsebody = response["data"];
         data.addAll(responsebody.map((e) => OrdersModel.fromJson(e)));
       } else {
-        print("nodata");
         statusRequest = StatusRequest.none;
       }
     }
@@ -37,7 +35,6 @@ class BindingController extends GetxController {
     update();
     var response = await bindingdata.approveOrder(
         ordersid, usersid, myServices.sharedPreferences.getString("id")!);
-    print("=============================== Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
@@ -46,7 +43,6 @@ class BindingController extends GetxController {
         // List responsebody = response["data"];
         // data.addAll(responsebody.map((e) => OrdersModel.fromJson(e)));
       } else {
-        print("nodata");
         statusRequest = StatusRequest.none;
       }
     }

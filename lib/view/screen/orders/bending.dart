@@ -9,7 +9,7 @@ class BendingOrders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  BindingController controller =  Get.put(BindingController());
+    Get.put(BindingController());
 
     return Scaffold(
       // appBar: AppBar(

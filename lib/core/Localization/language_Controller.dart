@@ -1,6 +1,5 @@
 import 'package:delivery/core/Functions/FCMConfingration_Functions.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:delivery/core/Constant/AppTheme_Const.dart';
 import 'package:delivery/core/Services/Services.dart';
@@ -49,10 +48,10 @@ class LanguageController extends GetxController {
     fcmConFing();
     String? sharedpreflang = myServices.sharedPreferences.getString("lang");
     if (sharedpreflang == "ar") {
-      language = Locale("ar");
+      language = const Locale("ar");
       apptheme = Themes.themeArabic;
     } else if (sharedpreflang == "en") {
-      language = Locale("en");
+      language = const Locale("en");
       apptheme = Themes.themeEnglish;
     } else {
       language = Locale(Get.deviceLocale!.languageCode);

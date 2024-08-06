@@ -11,7 +11,7 @@ class Logo extends StatelessWidget {
       radius: 70,
       child: ClipOval(
         child: Container(
-          padding: EdgeInsets.all(0), // Radius
+          padding: const EdgeInsets.all(0), // Radius
           child: Image.asset(
             AppImageAsset.logo,
           ),

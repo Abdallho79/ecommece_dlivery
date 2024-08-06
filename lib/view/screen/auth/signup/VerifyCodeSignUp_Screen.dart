@@ -66,7 +66,7 @@ class VerifyCodeSignUpScreen extends StatelessWidget {
                     codeController.goToSuccessSignUp(verificationCode);
                   }, // end onSubmit
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 CoustomButton(

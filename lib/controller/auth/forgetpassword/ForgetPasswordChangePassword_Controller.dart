@@ -30,7 +30,6 @@ class ChangePasswordController extends GetxController {
     email = Get.arguments["email"];
     password1 = TextEditingController();
     password2 = TextEditingController();
-    // TODO: implement onInit
     super.onInit();
   }
 
@@ -38,7 +37,6 @@ class ChangePasswordController extends GetxController {
   void dispose() {
     password1!.dispose();
     password2!.dispose();
-    // TODO: implement dispose
     super.dispose();
   }
 

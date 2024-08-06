@@ -19,7 +19,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           centerTitle: true,
-          title: CoustomTitle(
+          title: const CoustomTitle(
               color: AppColor.grey,
               text: "Sign In",
               size: 35,

@@ -1,5 +1,4 @@
 // import 'package:delivery/view/screen/archive.dart';
-import 'package:delivery/Test.dart';
 import 'package:delivery/view/screen/orders/bending.dart';
 import 'package:delivery/view/screen/orders/ordersdetails.dart';
 import 'package:delivery/view/screen/orders/tracking_screen.dart';

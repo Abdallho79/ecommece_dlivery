@@ -5,10 +5,10 @@ class OrDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Container(
+        SizedBox(
           width: 150,
           child: Divider(
             color: Colors.grey, // لون الخط
@@ -16,7 +16,7 @@ class OrDivider extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          padding: EdgeInsets.symmetric(horizontal: 8.0),
           child: Text(
             "OR",
             style: TextStyle(
@@ -25,7 +25,7 @@ class OrDivider extends StatelessWidget {
             ),
           ),
         ),
-        Container(
+        SizedBox(
           width: 150,
           child: Divider(
             color: Colors.grey, // لون الخط

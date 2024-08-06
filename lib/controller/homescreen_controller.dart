@@ -1,19 +1,18 @@
 import 'package:delivery/view/screen/orders/accepte_Screen.dart';
 import 'package:delivery/view/screen/orders/bending.dart';
-import 'package:delivery/view/screen/settings_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 abstract class HomeScreenController extends GetxController {
-  changePage(int currentpage);
+  changePage(int i);
 }
 
 class HomeScreenControllerImp extends HomeScreenController {
   int currentpage = 0;
 
   List<Widget> listPage = [
-    BendingOrders(),
-    AccepteOrders(),
+    const BendingOrders(),
+    const AccepteOrders(),
     // SettingsScreen(),
   ];
 

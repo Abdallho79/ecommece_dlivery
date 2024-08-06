@@ -16,7 +16,7 @@ class OnBoardingCOntroller extends GetxController {
       Get.offAllNamed(AppRouts.logIn);
     } else {
       pageController!.animateToPage(currentpage,
-          duration: Duration(milliseconds: 900), curve: Curves.easeInOut);
+          duration: const Duration(milliseconds: 900), curve: Curves.easeInOut);
     }
   }
 

@@ -39,7 +39,6 @@ class LoginController extends GetxController {
       statusRequest = handlingData(response);
       if (StatusRequest.success == statusRequest) {
         if (response['status'] == "success") {
-          print("===========${response}===========");
           if (response["data"]["delivery_approve"].toString() == "1") {
             myServices.sharedPreferences
                 .setString("id", response["data"]["delivery_id"].toString());
@@ -54,7 +53,7 @@ class LoginController extends GetxController {
                 "name", response["data"]["delivery_name"].toString());
             myServices.sharedPreferences.setString("step", "2");
             FirebaseMessaging.instance.subscribeToTopic("delivery");
-            FirebaseMessaging.instance.subscribeToTopic("delivery${id}");
+            FirebaseMessaging.instance.subscribeToTopic("delivery$id");
             Get.offAllNamed(AppRouts.home);
           } else {
             Get.snackbar("Error", "Email is Not Verfy please talk to owner");
@@ -80,7 +79,6 @@ class LoginController extends GetxController {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     email!.dispose();
     password!.dispose();
     super.dispose();

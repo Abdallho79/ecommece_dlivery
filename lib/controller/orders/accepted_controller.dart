@@ -18,7 +18,6 @@ class AcceptedController extends GetxController {
     update();
     var response = await bindingdata
         .getData(myServices.sharedPreferences.getString("id")!);
-    print("=============================== Controller $response ");
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
@@ -31,13 +30,11 @@ class AcceptedController extends GetxController {
     update();
   }
 
-  doneOrders(String  usersid ,  String ordersid) async {
+  doneOrders(String usersid, String ordersid) async {
     // data.clear();
     statusRequest = StatusRequest.loading;
     update();
-    var response = await bindingdata
-        .doneOrder(ordersid , usersid);
-    print("=============================== Controller $response ");
+    var response = await bindingdata.doneOrder(ordersid, usersid);
     statusRequest = handlingData(response);
     if (StatusRequest.success == statusRequest) {
       if (response['status'] == "success") {
